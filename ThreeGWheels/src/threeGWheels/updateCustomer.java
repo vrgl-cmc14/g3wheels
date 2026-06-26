@@ -36,7 +36,7 @@ public class updateCustomer extends JDialog {
                           String licenseNum, String address,
                           String username, String password) {
 
-        super(detailsFrame, "UPDATE CUSTOMER \u2013 ID " + id, true);
+        super(detailsFrame, "UPDATE CUSTOMER - ID " + id, true);
         this.detailsFrame = detailsFrame;
         this.mainFrame = mainFrame;
         this.customerID = id;

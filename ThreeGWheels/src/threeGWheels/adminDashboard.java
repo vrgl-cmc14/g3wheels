@@ -34,16 +34,20 @@ public class adminDashboard extends JFrame {
         companyName.setHorizontalAlignment(SwingConstants.CENTER);
         header.add(companyName, BorderLayout.CENTER);
 
-        JPanel menuWrapper = new JPanel(new GridBagLayout());
+        JPanel menuWrapper = new JPanel();
         menuWrapper.setBackground(WHITE);
         contentPane.add(menuWrapper, BorderLayout.CENTER);
+        menuWrapper.setLayout(null);
 
-        JPanel cards = new JPanel(new GridLayout(3, 1, 0, 18));
+        JPanel cards = new JPanel();
+        cards.setBounds(56, 26, 300, 326);
         cards.setBackground(WHITE);
-        cards.setPreferredSize(new Dimension(300, 240));
+        cards.setPreferredSize(new Dimension(300, 326));
         menuWrapper.add(cards);
+        cards.setLayout(null);
 
         JPanel vehicleCard = new JPanel(new BorderLayout());
+        vehicleCard.setBounds(0, 0, 300, 68);
         vehicleCard.setBackground(DARK_BLUE);
         vehicleCard.setBorder(new EmptyBorder(0, 18, 0, 18));
         vehicleCard.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -71,6 +75,7 @@ public class adminDashboard extends JFrame {
         });
 
         JPanel customerCard = new JPanel(new BorderLayout());
+        customerCard.setBounds(0, 86, 300, 68);
         customerCard.setBackground(DARK_BLUE);
         customerCard.setBorder(new EmptyBorder(0, 18, 0, 18));
         customerCard.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -97,6 +102,7 @@ public class adminDashboard extends JFrame {
         });
 
         JPanel reservationCard = new JPanel(new BorderLayout());
+        reservationCard.setBounds(0, 172, 300, 68);
         reservationCard.setBackground(DARK_BLUE);
         reservationCard.setBorder(new EmptyBorder(0, 18, 0, 18));
         reservationCard.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -122,14 +128,46 @@ public class adminDashboard extends JFrame {
             public void mouseExited(MouseEvent e)  { reservationCard.setBackground(DARK_BLUE);  }
         });
 
+        JPanel reportsCard = new JPanel(new BorderLayout());
+        reportsCard.setBounds(0, 258, 300, 68);
+        reportsCard.setBackground(DARK_BLUE);
+        reportsCard.setBorder(new EmptyBorder(0, 18, 0, 18));
+        reportsCard.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        cards.add(reportsCard);
+
+        JLabel reportsLabel = new JLabel("GENERATE REPORTS");
+        reportsLabel.setFont(new Font("Dialog", Font.BOLD, 15));
+        reportsLabel.setForeground(WHITE);
+        reportsCard.add(reportsLabel, BorderLayout.WEST);
+
+        JLabel reportsArrow = new JLabel(">");
+        reportsArrow.setFont(new Font("Dialog", Font.BOLD, 17));
+        reportsArrow.setForeground(WHITE);
+        reportsCard.add(reportsArrow, BorderLayout.EAST);
+
+        reportsCard.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                reportsParent rpt = new reportsParent();
+                rpt.setVisible(true);
+                setVisible(false);
+            }
+            public void mouseEntered(MouseEvent e) { reportsCard.setBackground(HOVER_BLUE); }
+            public void mouseExited(MouseEvent e)  { reportsCard.setBackground(DARK_BLUE);  }
+        });
+
         JPanel footer = new JPanel();
         footer.setBackground(WHITE);
         footer.setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0, new Color(210, 218, 240)));
         contentPane.add(footer, BorderLayout.SOUTH);
-
-        JLabel footerLabel = new JLabel("SSIBAL");
-        footerLabel.setFont(new Font("Dialog", Font.PLAIN, 11));
-        footerLabel.setForeground(new Color(150, 160, 180));
-        footer.add(footerLabel);
+        
+        JButton btnNewButton = new JButton("Logout");
+        btnNewButton.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		adminLogin aL = new adminLogin();
+        		aL.setVisible(true);
+        		setVisible(false);
+        	}
+        });
+        footer.add(btnNewButton);
     }
 }

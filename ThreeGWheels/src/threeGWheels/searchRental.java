@@ -27,7 +27,7 @@ public class searchRental extends JFrame {
     public searchRental(rentalParent mainFrame) {
         this.mainFrame = mainFrame;
 
-        setTitle("3G Wheels \u2013 Search Rent Records");
+        setTitle("3G Wheels - Search Rent Records");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(150, 100, 780, 620);
         setResizable(false);

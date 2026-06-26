@@ -29,7 +29,7 @@ public class searchCustomer extends JFrame {
     public searchCustomer(customerParent mainFrame) {
         this.mainFrame = mainFrame;
 
-        setTitle("3G Wheels \u2013 Search Customer Records");
+        setTitle("3G Wheels - Search Customer Records");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(150, 100, 780, 660);
         setResizable(false);

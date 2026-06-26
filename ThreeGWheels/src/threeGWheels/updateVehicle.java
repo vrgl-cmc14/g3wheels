@@ -24,7 +24,7 @@ public class updateVehicle extends JDialog {
                          int seatingCapacity, int rentalRate,
                          String fuelType, String transmission, int mileage) {
 
-        super(detailsFrame, "UPDATE VEHICLE \u2013 ID " + vehicleID, true);
+        super(detailsFrame, "UPDATE VEHICLE - ID " + vehicleID, true);
         this.detailsFrame = detailsFrame;
         this.mainFrame = mainFrame;
         this.vehicleID = vehicleID;

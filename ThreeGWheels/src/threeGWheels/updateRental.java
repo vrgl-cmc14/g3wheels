@@ -21,7 +21,7 @@ public class updateRental extends JDialog {
 
     public updateRental(JFrame detailsFrame, rentalParent mainFrame, int rentalId, String currentStatus) {
 
-        super(detailsFrame, "UPDATE RENTAL \u2013 ID " + rentalId, true);
+        super(detailsFrame, "UPDATE RENTAL - ID " + rentalId, true);
         this.detailsFrame = detailsFrame;
         this.mainFrame = mainFrame;
         this.rentalID = rentalId;

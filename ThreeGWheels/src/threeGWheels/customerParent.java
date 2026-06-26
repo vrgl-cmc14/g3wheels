@@ -35,7 +35,7 @@ public class customerParent extends JFrame {
         headerBanner.setBackground(DARK_BLUE);
         headerBanner.setPreferredSize(new Dimension(620, 70));
 
-        JLabel companyName = new JLabel("3G WHEELS");
+        JLabel companyName = new JLabel("🚘 3G WHEELS");
         companyName.setForeground(WHITE);
         companyName.setFont(new Font("Dialog", Font.BOLD, 26));
         companyName.setHorizontalAlignment(SwingConstants.CENTER);

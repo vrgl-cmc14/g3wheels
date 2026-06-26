@@ -45,7 +45,7 @@ public class adminLogin extends JFrame {
         header.setBackground(DARK_BLUE);
         header.setPreferredSize(new Dimension(480, 90));
 
-        JLabel companyName = new JLabel("3G WHEELS");
+        JLabel companyName = new JLabel("🚘 3G WHEELS ADMIN");
         companyName.setForeground(WHITE);
         companyName.setFont(new Font("Dialog", Font.BOLD, 22));
         companyName.setHorizontalAlignment(SwingConstants.CENTER);
@@ -66,39 +66,40 @@ public class adminLogin extends JFrame {
         centerArea.setBackground(WHITE);
         centerArea.add(toolbar, BorderLayout.NORTH);
 
-        JPanel formWrapper = new JPanel(new GridBagLayout());
+        JPanel formWrapper = new JPanel();
         formWrapper.setBackground(WHITE);
 
         JPanel form = new JPanel(null);
+        form.setBounds(70, 62, 340, 230);
         form.setBackground(WHITE);
         form.setPreferredSize(new Dimension(340, 230));
 
         JLabel lblUsername = new JLabel("USERNAME");
+        lblUsername.setBounds(0, 41, 340, 18);
         lblUsername.setFont(new Font("Dialog", Font.BOLD, 11));
         lblUsername.setForeground(DARK_BLUE);
-        lblUsername.setBounds(10, 41, 340, 18);
 
         JLabel lblPassword = new JLabel("PASSWORD");
+        lblPassword.setBounds(0, 104, 340, 18);
         lblPassword.setFont(new Font("Dialog", Font.BOLD, 11));
         lblPassword.setForeground(DARK_BLUE);
-        lblPassword.setBounds(0, 74, 340, 18);
 
         txtPassword = new JPasswordField();
-        txtPassword.setBounds(0, 96, 340, 34);
+        txtPassword.setBounds(106, 96, 234, 34);
         txtPassword.setFont(new Font("Dialog", Font.PLAIN, 13));
         txtPassword.setBorder(BorderFactory.createCompoundBorder(
             BorderFactory.createLineBorder(ROW_BORDER, 1),
             new EmptyBorder(4, 8, 4, 8)));
 
         JLabel errorLabel = new JLabel(" ");
+        errorLabel.setBounds(0, 142, 340, 18);
         errorLabel.setFont(new Font("Dialog", Font.BOLD, 11));
         errorLabel.setForeground(new Color(180, 30, 30));
-        errorLabel.setBounds(0, 142, 340, 18);
         errorLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         JButton loginButton = new JButton("LOG IN");
-        loginButton.setBounds(0, 168, 340, 38);
-        loginButton.setBackground(DARK_BLUE);
+        loginButton.setBounds(0, 157, 340, 38);
+        loginButton.setBackground(new Color(0, 64, 128));
         loginButton.setForeground(WHITE);
         loginButton.setFont(new Font("Dialog", Font.BOLD, 13));
         loginButton.setFocusPainted(false);
@@ -120,17 +121,15 @@ public class adminLogin extends JFrame {
 
         loginButton.addActionListener(loginAction);
         txtPassword.addActionListener(loginAction);
+        formWrapper.setLayout(null);
+        form.setLayout(null);
 
         form.add(lblUsername);
         form.add(lblPassword);
         form.add(txtPassword);
         form.add(errorLabel);
         form.add(loginButton);
-
-        GridBagConstraints gbc_form = new GridBagConstraints();
-        gbc_form.gridx = 0;
-        gbc_form.gridy = 1;
-        formWrapper.add(form, gbc_form);
+        formWrapper.add(form);
         
                 txtUsername = new JTextField();
                 txtUsername.setBounds(106, 36, 234, 28);

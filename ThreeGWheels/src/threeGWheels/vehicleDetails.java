@@ -50,7 +50,7 @@ public class vehicleDetails extends JFrame {
         headerBanner.setBackground(DARK_BLUE);
         headerBanner.setPreferredSize(new Dimension(420, 55));
 
-        JLabel companyName = new JLabel("3G WHEELS");
+        JLabel companyName = new JLabel("🚘 3G WHEELS");
         companyName.setForeground(WHITE);
         companyName.setFont(new Font("Dialog", Font.BOLD, 20));
         companyName.setHorizontalAlignment(SwingConstants.CENTER);

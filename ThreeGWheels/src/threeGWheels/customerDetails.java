@@ -19,7 +19,7 @@ public class customerDetails extends JFrame {
             customerParent parent) {
 
         setTitle("3G Wheels – Customer Details");
-        setBounds(200, 100, 700, 650);
+        setBounds(200, 150, 420, 530);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setResizable(false);

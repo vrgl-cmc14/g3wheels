@@ -27,7 +27,7 @@ public class rentalParent extends JFrame {
     private String activeFilter = "ALL";
 
     public rentalParent() {
-        setTitle("3G Wheels \u2013 Rental Records");
+        setTitle("3G Wheels - Rental Records");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 780, 660);
         setResizable(false);
@@ -41,7 +41,7 @@ public class rentalParent extends JFrame {
         headerBanner.setPreferredSize(new Dimension(780, 90));
         contentPane.add(headerBanner, BorderLayout.NORTH);
 
-        JLabel companyName = new JLabel("3G WHEELS");
+        JLabel companyName = new JLabel("🚘 3G WHEELS");
         companyName.setForeground(WHITE);
         companyName.setFont(new Font("Dialog", Font.BOLD, 22));
         companyName.setHorizontalAlignment(SwingConstants.CENTER);

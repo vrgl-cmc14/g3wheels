@@ -47,7 +47,7 @@ public class vehicleParent extends JFrame {
         headerBanner.setPreferredSize(new Dimension(620, 90));
         contentPane.add(headerBanner, BorderLayout.NORTH);
 
-        JLabel companyName = new JLabel("3G WHEELS");
+        JLabel companyName = new JLabel("🚘 3G WHEELS");
         companyName.setForeground(WHITE);
         companyName.setFont(new Font("Dialog", Font.BOLD, 22));
         companyName.setHorizontalAlignment(SwingConstants.CENTER);
@@ -75,7 +75,24 @@ public class vehicleParent extends JFrame {
             addFrame.setVisible(true);
             setVisible(false);
         });
-        toolbar.add(addVehicleButton, BorderLayout.EAST);
+
+        JButton searchButton = new JButton("SEARCH");
+        searchButton.setBackground(WHITE);
+        searchButton.setForeground(DARK_BLUE);
+        searchButton.setFont(new Font("Dialog", Font.BOLD, 11));
+        searchButton.setFocusPainted(false);
+        searchButton.setBorder(new EmptyBorder(5, 12, 5, 12));
+        searchButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        searchButton.addActionListener(e -> {
+            searchVehicle searchFrame = new searchVehicle(this);
+            searchFrame.setVisible(true);
+        });
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 6, 0));
+        buttonPanel.setBackground(WHITE);
+        buttonPanel.add(searchButton);
+        buttonPanel.add(addVehicleButton);
+        toolbar.add(buttonPanel, BorderLayout.EAST);
 
         JPanel centerArea = new JPanel(new BorderLayout());
         centerArea.setBackground(WHITE);
@@ -91,6 +108,27 @@ public class vehicleParent extends JFrame {
         centerArea.add(scrollPane, BorderLayout.CENTER);
 
         contentPane.add(centerArea, BorderLayout.CENTER);
+
+        JPanel footer = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 8));
+        footer.setBackground(new Color(235, 238, 248));
+        footer.setBorder(new MatteBorder(1, 0, 0, 0, new Color(200, 210, 230)));
+
+        JButton backBtn = new JButton("BACK");
+        backBtn.setFont(new Font("Dialog", Font.BOLD, 11));
+        backBtn.setBackground(DARK_BLUE);
+        backBtn.setForeground(WHITE);
+        backBtn.setFocusPainted(false);
+        backBtn.setOpaque(true);
+        backBtn.setBorderPainted(false);
+        backBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        backBtn.addActionListener(e -> {
+            dispose();
+            adminDashboard dashboard = new adminDashboard();
+            dashboard.setVisible(true);
+        });
+        footer.add(backBtn);
+
+        contentPane.add(footer, BorderLayout.SOUTH);
 
         loadRecords(recordsPanel);
     }

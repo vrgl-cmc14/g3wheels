@@ -54,8 +54,8 @@ public class rentalDetails extends JFrame {
 
         this.mainFrame = parent;
 
-        setTitle("3G Wheels \u2013 Rental Details");
-        setBounds(150, 60, 620, 820);
+        setTitle("3G Wheels - Rental Details");
+        setBounds(200, 150, 420, 530);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setResizable(false);
