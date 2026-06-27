@@ -815,7 +815,7 @@ public class reportsParent extends JFrame {
     }
 
     private String showPeso(long amount) {
-        return "\u20B1" + String.format("%,d", amount);
+        return "" + String.format("%,d", amount);
     }
 
     public static void main(String[] args) {

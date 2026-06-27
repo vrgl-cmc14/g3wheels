@@ -28,7 +28,7 @@ public class adminDashboard extends JFrame {
         header.setPreferredSize(new Dimension(420, 80));
         contentPane.add(header, BorderLayout.NORTH);
 
-        JLabel companyName = new JLabel("\uD83D\uDE98 3G WHEELS");
+        JLabel companyName = new JLabel("🚘 3G WHEELS");
         companyName.setForeground(WHITE);
         companyName.setFont(new Font("Dialog", Font.BOLD, 26));
         companyName.setHorizontalAlignment(SwingConstants.CENTER);

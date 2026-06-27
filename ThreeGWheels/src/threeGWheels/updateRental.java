@@ -38,7 +38,7 @@ public class updateRental extends JDialog {
         dialogHeader.setPreferredSize(new Dimension(520, 45));
         dialogPane.add(dialogHeader, BorderLayout.NORTH);
 
-        JLabel dialogTitle = new JLabel("UPDATE RENTAL STATUS  \u2013  ID " + rentalId);
+        JLabel dialogTitle = new JLabel("UPDATE RENTAL STATUS - ID " + rentalId);
         dialogTitle.setForeground(WHITE);
         dialogTitle.setFont(new Font("Dialog", Font.BOLD, 13));
         dialogTitle.setHorizontalAlignment(SwingConstants.CENTER);

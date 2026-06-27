@@ -53,7 +53,7 @@ public class updateCustomer extends JDialog {
         dialogHeader.setPreferredSize(new Dimension(520, 45));
         dialogPane.add(dialogHeader, BorderLayout.NORTH);
 
-        JLabel dialogTitle = new JLabel("UPDATE CUSTOMER  \u2013  ID " + id);
+        JLabel dialogTitle = new JLabel("UPDATE CUSTOMER - ID " + id);
         dialogTitle.setForeground(WHITE);
         dialogTitle.setFont(new Font("Dialog", Font.BOLD, 13));
         dialogTitle.setHorizontalAlignment(SwingConstants.CENTER);

@@ -68,7 +68,7 @@ public class rentalDetails extends JFrame {
         header.setBackground(DARK_BLUE);
         header.setPreferredSize(new Dimension(620, 70));
 
-        JLabel titleLbl = new JLabel("RENTAL DETAILS  \u2013  ID #" + rentalId);
+        JLabel titleLbl = new JLabel("RENTAL DETAILS - ID #" + rentalId);
         titleLbl.setForeground(WHITE);
         titleLbl.setFont(new Font("Dialog", Font.BOLD, 20));
         titleLbl.setHorizontalAlignment(SwingConstants.CENTER);
@@ -320,7 +320,7 @@ public class rentalDetails extends JFrame {
         valEndDate.setText(endDate != null ? endDate : "N/A");
         valPickup.setText(pickup != null ? pickup : "N/A");
         valReturn.setText(returnLoc != null ? returnLoc : "N/A");
-        valTotalCost.setText("\u20B1" + totalCost);
+        valTotalCost.setText("" + totalCost);
     }
 
     private void populateVehicleFields(int vehicleId) {
@@ -337,7 +337,7 @@ public class rentalDetails extends JFrame {
                 valPlate.setText(rs.getString("license_plate_number"));
                 valRegNum.setText(rs.getString("vehicle_registration_number"));
                 valSeating.setText(String.valueOf(rs.getInt("seating_capacity")));
-                valRate.setText("\u20B1" + rs.getInt("rental_rate"));
+                valRate.setText("" + rs.getInt("rental_rate"));
                 valFuel.setText(rs.getString("fuel_type"));
                 valTransmission.setText(rs.getString("transmission"));
                 valMileage.setText(rs.getInt("mileage") + " km");
@@ -375,7 +375,7 @@ public class rentalDetails extends JFrame {
                 valDatetime.setText(rs.getString("payment_datetime"));
                 valMethod.setText(rs.getString("payment_method"));
                 valRefCode.setText(rs.getString("reference_code"));
-                valAmountPaid.setText("\u20B1" + rs.getInt("amount_paid"));
+                valAmountPaid.setText("" + rs.getInt("amount_paid"));
             } else {
                 valPaymentId.setText("No payment record found.");
             }
