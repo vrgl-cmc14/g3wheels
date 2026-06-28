@@ -59,8 +59,8 @@ public class customerParent extends JFrame {
         JPanel btnGroup = new JPanel(new FlowLayout(FlowLayout.RIGHT, 6, 0));
         btnGroup.setBackground(WHITE);
 
-        JButton searchButton = new JButton("Search a Customer");
-        searchButton.setBackground(new Color(0, 0, 160));
+        JButton searchButton = new JButton("Search");
+        searchButton.setBackground(new Color(0, 64, 128));
         searchButton.setForeground(WHITE);
         searchButton.setFont(new Font("Dialog", Font.BOLD, 11));
         searchButton.setFocusPainted(false);
@@ -71,15 +71,6 @@ public class customerParent extends JFrame {
             searchFrame.setVisible(true);
         });
         btnGroup.add(searchButton);
-
-        JButton addButton = new JButton("Add a Customer Record");
-        addButton.setBackground(new Color(0, 64, 128));
-        addButton.setForeground(WHITE);
-        addButton.setFont(new Font("Dialog", Font.BOLD, 11));
-        addButton.setFocusPainted(false);
-        addButton.setBorderPainted(false);
-        addButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        btnGroup.add(addButton);
 
         toolbar.add(btnGroup, BorderLayout.EAST);
         body.add(toolbar, BorderLayout.NORTH);

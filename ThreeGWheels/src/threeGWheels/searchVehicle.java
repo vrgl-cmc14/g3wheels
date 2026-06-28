@@ -43,7 +43,7 @@ public class searchVehicle extends JFrame {
         header.setBackground(DARK_BLUE);
         header.setPreferredSize(new Dimension(620, 90));
 
-        JLabel titleLbl = new JLabel("SEARCH VEHICLE RECORDS");
+        JLabel titleLbl = new JLabel("SEARCH: VEHICLE");
         titleLbl.setForeground(WHITE);
         titleLbl.setFont(new Font("Dialog", Font.BOLD, 18));
         titleLbl.setHorizontalAlignment(SwingConstants.CENTER);
@@ -140,7 +140,6 @@ public class searchVehicle extends JFrame {
 
         searchBar.add(brandRow);
 
-        // Search by Model
         JPanel modelRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         modelRow.setBackground(WHITE);
 
@@ -245,7 +244,6 @@ public class searchVehicle extends JFrame {
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            // Type uses exact match; others use LIKE with wildcards
             if (mode.equals("type")) {
                 ps.setString(1, keyword);
             } else {

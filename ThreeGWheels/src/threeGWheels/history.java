@@ -44,7 +44,7 @@ public class history extends Abstraction {
         JPanel header = new JPanel(new BorderLayout());
         header.setBackground(DARK_BLUE);
         header.setBorder(new EmptyBorder(22, 0, 22, 0));
-        JLabel title = makeLabel("RENTAL HISTORY", WHITE, Font.BOLD, 18);
+        JLabel title = makeLabel("HISTORY", WHITE, Font.BOLD, 18);
         title.setHorizontalAlignment(SwingConstants.CENTER);
         header.add(title, BorderLayout.CENTER);
         return header;

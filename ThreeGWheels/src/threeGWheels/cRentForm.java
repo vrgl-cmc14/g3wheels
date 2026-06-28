@@ -21,6 +21,7 @@ public class cRentForm extends JFrame {
     private static final Color LIGHT_GRAY = new Color(200, 210, 230);
     private static final Color ROW_BASE = new Color(230, 235, 245);
     private static final Color ROW_ALT = new Color(210, 218, 238);
+    
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/vehiclerentalsystem";
     private static final String DB_USER = "root";
@@ -165,7 +166,7 @@ public class cRentForm extends JFrame {
         cancelBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         cancelBtn.addActionListener(e -> dispose());
 
-        JButton confirmBtn = new JButton("CONFIRM RENTAL");
+        JButton confirmBtn = new JButton("CONFIRM");
         confirmBtn.setBackground(new Color(30, 70, 160));
         confirmBtn.setForeground(WHITE);
         confirmBtn.setFont(new Font("Dialog", Font.BOLD, 11));
@@ -316,7 +317,7 @@ public class cRentForm extends JFrame {
         String method = (String) cbPaymentMethod.getSelectedItem();
 
         if (startStr.isEmpty() || endStr.isEmpty() || pickup.isEmpty()
-                || returnLoc.isEmpty() || refCode.isEmpty()) {
+                || returnLoc.isEmpty()) {
             JOptionPane.showMessageDialog(this,
                 "Please fill in all rental and payment fields.",
                 "Incomplete Form", JOptionPane.WARNING_MESSAGE);

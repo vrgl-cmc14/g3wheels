@@ -155,12 +155,15 @@ public class adminDashboard extends JFrame {
             public void mouseExited(MouseEvent e)  { reportsCard.setBackground(DARK_BLUE);  }
         });
 
+        
         JPanel footer = new JPanel();
         footer.setBackground(WHITE);
         footer.setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0, new Color(210, 218, 240)));
         contentPane.add(footer, BorderLayout.SOUTH);
         
         JButton btnNewButton = new JButton("Logout");
+        btnNewButton.setForeground(new Color(255, 255, 255));
+        btnNewButton.setBackground(new Color(0, 64, 128));
         btnNewButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		adminLogin aL = new adminLogin();

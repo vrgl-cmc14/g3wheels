@@ -85,7 +85,7 @@ public class menu extends Abstraction {
 
         grid.add(buildCard("HISTORY", e -> new history(customerId).setVisible(true)));
         grid.add(buildCard("OFFERS", e -> openOffers()));
-        grid.add(buildCard("ACCOUNTS", e -> openAccounts()));
+        grid.add(buildCard("ACCOUNT", e -> openAccounts()));
 
         wrapper.add(grid, BorderLayout.CENTER);
         outer.add(wrapper, BorderLayout.CENTER);
