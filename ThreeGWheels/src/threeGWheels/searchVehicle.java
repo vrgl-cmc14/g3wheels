@@ -53,7 +53,6 @@ public class searchVehicle extends JFrame {
         searchBar.setBackground(WHITE);
         searchBar.setBorder(new EmptyBorder(10, 14, 10, 14));
 
-        // Search by ID
         JPanel idRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         idRow.setBackground(WHITE);
 
@@ -111,7 +110,6 @@ public class searchVehicle extends JFrame {
 
         searchBar.add(typeRow);
 
-        // Search by Brand
         JPanel brandRow = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         brandRow.setBackground(WHITE);
 
