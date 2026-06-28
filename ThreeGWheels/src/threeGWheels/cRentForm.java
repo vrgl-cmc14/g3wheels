@@ -179,6 +179,7 @@ public class cRentForm extends JFrame {
         footer.add(confirmBtn);
         root.add(footer, BorderLayout.SOUTH);
 
+        
         FocusAdapter dateListener = new FocusAdapter() {
             @Override public void focusLost(FocusEvent e) { computeCost(); }
         };
